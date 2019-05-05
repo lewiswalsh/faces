@@ -1,0 +1,44 @@
+
+
+
+
+html {
+  background: #555; 
+  color:      #000;
+
+  --image_w : 160px;
+  --image_h : 160px;
+
+  --top_offset : 100px;
+  --left_offset : 100px;
+  --gap : 60px;
+}
+.face {
+  position:    absolute; 
+  width:         var(--image_w);
+  height:        var(--image_h);
+  border:        1px solid #ddd;
+  border-radius: 10px;
+  box-shadow:    0 0 14px #333;
+}
+#jerry { 
+  background: url('faces-me-col.jpg') repeat; 
+  top:        calc(var(--top_offset) + var(--image_h) + var(--gap)); /*380px; */
+  left:       var(--left_offset);
+}
+#george { 
+  background: url('faces-me-bw.jpg') repeat; 
+  top:        var(--top_offset); 
+  left:       var(--left_offset);
+}
+#elaine { 
+  background: url('faces-me-col.jpg') repeat; 
+  top:        var(--top_offset); 
+  left:       calc(var(--left_offset) + var(--image_w) + var(--gap));
+}
+#kramer { 
+  background: url('faces-me-bw.jpg') repeat; 
+  top:        calc(var(--top_offset) + var(--image_h) + var(--gap));
+  left:       calc(var(--left_offset) + var(--image_w) + var(--gap));
+}
+
